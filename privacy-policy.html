@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Invoice Register</title>
+<style>
+  :root{ color-scheme: light; }
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 760px; margin: 0 auto; padding: 48px 24px 80px;
+    color: #1f2333; line-height: 1.6; background: #fff;
+  }
+  h1{ font-size: 28px; margin-bottom: 4px; }
+  .updated{ color: #6b7085; font-size: 14px; margin-bottom: 36px; }
+  h2{ font-size: 19px; margin-top: 36px; margin-bottom: 10px; }
+  p, li{ font-size: 15px; }
+  ul{ padding-left: 22px; }
+  li{ margin-bottom: 6px; }
+  .note{
+    background: #f0f1f6; border-radius: 10px; padding: 14px 16px;
+    font-size: 13px; color: #4a4e63; margin-top: 40px;
+  }
+  a{ color: #3f3fa8; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Invoice Register — internal accounts-payable application · Last updated: November 2026</p>
+
+<h2>1. What this application is</h2>
+<p>
+  Invoice Register is an internal accounts-payable tool. The Application and all data
+  processed through it are the property of <strong>Fauji Foods Limited</strong>, a
+  company incorporated in Pakistan, and <strong>FonGrow Pvt Limited</strong> ("FonGrow",
+  together with Fauji Foods Limited, the "Owners"). It is used by Fauji Foods Limited and
+  its approved business units to extract, review, and approve supplier invoices, and to
+  post approved invoices into each business's own connected accounting system, including
+  QuickBooks Online. It is not a public product — it has no public sign-up, and access is
+  limited to employees granted login credentials by an administrator.
+</p>
+
+<h2>2. Scope of this policy</h2>
+<p>
+  This policy describes how Invoice Register accesses, uses, and stores data obtained
+  through its integration with the QuickBooks Online Accounting API (via Intuit's OAuth
+  2.0 authorization flow).
+</p>
+
+<h2>3. QuickBooks data we access</h2>
+<p>When a company administrator connects a QuickBooks Online company to Invoice Register, the application reads:</p>
+<ul>
+  <li><strong>Vendors</strong> — to match a supplier invoice to the correct QuickBooks vendor record.</li>
+  <li><strong>Chart of Accounts</strong> — to let a reviewer categorize an invoice line against the company's own expense accounts.</li>
+  <li><strong>Products and Services (Items)</strong> — to let a reviewer post an invoice line as a specific item where applicable.</li>
+</ul>
+<p>The application writes:</p>
+<ul>
+  <li><strong>Bills</strong> — created in QuickBooks Online once a supplier invoice has been reviewed and approved inside Invoice Register.</li>
+</ul>
+<p>
+  Invoice Register does not access QuickBooks Customers, Sales/AR Invoices, Payments,
+  Payroll, or banking/bank-feed data.
+</p>
+
+<h2>4. How we use this data</h2>
+<p>
+  QuickBooks vendor, account, and item data is used solely to let a reviewer correctly
+  categorize a supplier invoice before it is posted. Invoice data entered or extracted
+  within Invoice Register (vendor name, invoice number, date, line items, amounts) is sent
+  to QuickBooks Online only as part of creating the corresponding Bill record in the
+  company the invoice belongs to.
+</p>
+
+<h2>5. How we store and protect data</h2>
+<ul>
+  <li>OAuth 2.0 access and refresh tokens issued by Intuit are encrypted at rest in our database and are never exposed to end users or stored in plain text.</li>
+  <li>Each connected business's own Intuit app credentials (client ID and secret) are likewise encrypted at rest.</li>
+  <li>All communication with Intuit's servers occurs over HTTPS/TLS.</li>
+  <li>Access to Invoice Register itself is restricted to authenticated employees with role-based permissions (reviewer, approver, pusher, admin) scoped to their own business.</li>
+  <li>The application is hosted on private infrastructure that is not exposed to the public internet.</li>
+</ul>
+
+<h2>6. Data sharing and ownership</h2>
+<p>
+  We do not sell, rent, or share QuickBooks data with any third party. Data obtained
+  through the QuickBooks Online API is used exclusively within Invoice Register for the
+  purpose described above. All data processed through the Application remains the
+  property of Fauji Foods Limited and FonGrow Pvt Limited, or of the business unit the
+  data belongs to, as applicable.
+</p>
+
+<h2>7. Data retention and disconnecting</h2>
+<p>
+  QuickBooks OAuth tokens are retained only for as long as a company's QuickBooks
+  connection remains active. A company administrator may revoke Invoice Register's access
+  at any time from within QuickBooks Online's own "Connected Apps" settings; doing so
+  immediately invalidates the stored tokens.
+</p>
+
+<h2>8. Changes to this policy</h2>
+<p>
+  This policy may be updated from time to time to reflect changes in how Invoice Register
+  integrates with QuickBooks Online. The "Last updated" date above reflects the most
+  recent revision.
+</p>
+
+<h2>9. Governing parties</h2>
+<p>
+  This policy is issued on behalf of Fauji Foods Limited and FonGrow Pvt Limited, joint
+  owners of the Application, and is governed by the laws of Pakistan.
+</p>
+
+<h2>10. Contact</h2>
+<p>
+  Questions about this policy or how Invoice Register handles QuickBooks data can be
+  directed to: <strong>[insert contact email]</strong>
+</p>
+
+<div class="note">
+  This page exists to satisfy Intuit's QuickBooks Online app-assessment requirement that a
+  publicly reachable privacy policy be provided for any app connected to a production
+  QuickBooks company, including internal/unlisted apps. Replace the contact line above
+  before publishing, and consider a legal review if this will be relied on beyond that
+  purpose.
+</div>
+
+</body>
+</html>
